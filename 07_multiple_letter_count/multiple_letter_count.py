@@ -7,3 +7,14 @@ def multiple_letter_count(phrase):
         >>> multiple_letter_count('Yay')
         {'Y': 1, 'a': 1, 'y': 1}
     """
+
+    phrase_breakdown = {}
+
+    for ltr in phrase:
+        if (phrase_breakdown.get(ltr) != None):
+            phrase_breakdown.update({ltr: phrase_breakdown.get(ltr) + 1})
+        else:
+            phrase_breakdown.update({ltr: 1})
+
+    return phrase_breakdown
+
