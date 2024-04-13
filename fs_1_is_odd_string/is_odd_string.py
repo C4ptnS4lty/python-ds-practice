@@ -29,3 +29,9 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    count = 0
+
+    for ltr in word:
+        count += ord(ltr)
+
+    return (not count % 2 == 0)

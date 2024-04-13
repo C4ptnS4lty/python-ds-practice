@@ -12,4 +12,12 @@ def three_odd_numbers(nums):
 
         >>> three_odd_numbers([1, 2, 3, 3, 2])
         False
-    """
+    """ 
+    
+    for num in nums:
+        sum = 0
+        if(nums.index(num) + 2 < len(nums)):
+            sum = num + nums[nums.index(num) + 1] + nums[nums.index(num) + 2]
+        if(not sum % 2 == 0):
+            return True
+    return False
